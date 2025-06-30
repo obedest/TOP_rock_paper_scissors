@@ -26,8 +26,10 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice == 'paper' && computerChoice == 'rock') ||
         (humanChoice == 'scissors' && computerChoice == 'paper')
     ) {
+        humanScore ++;
         return 'You win! ' + humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1) + ' beats ' + computerChoice
     } else {
+        computerScore ++;
         return 'You lose! ' + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1) + ' beats ' + humanChoice
     }
 }
