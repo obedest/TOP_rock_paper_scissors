@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-    const prob = Math.random(); // or let??
+    const prob = Math.random();
     if (prob < 0.33) {
         return 'rock';
     } else if (prob < 0.66) {
@@ -13,13 +13,15 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    const choice = prompt("Hi! Please enter you choice: 'rock', 'paper' or 'scissors'"); // or let??
+    const choice = prompt("Hi! Please enter you choice: 'rock', 'paper' or 'scissors'");
     return choice;
 }
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase()
     if (humanChoice == computerChoice) {
+        humanScore ++;
+        computerScore ++;
         return 'Tie!'
     } else if (
         (humanChoice == 'rock' && computerChoice == 'scissors') ||
